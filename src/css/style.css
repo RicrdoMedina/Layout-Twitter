@@ -1,0 +1,16 @@
+body{
+  background: red;
+}
+.topbar{
+  display:flex;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  background: orange;
+  width: 100%;
+  & .container{
+    width:80%;
+    background:blue;
+    height:500px;
+  }
+}
