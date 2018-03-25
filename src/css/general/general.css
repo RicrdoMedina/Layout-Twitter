@@ -1,0 +1,15 @@
+.fullname{
+  word-break: break-all;
+  color: #14171a;
+  font-size: 14px;
+  font-weight: bold;
+  &:hover{
+    color: var(--colorLink);
+    text-decoration:underline;
+    cursor: pointer;
+  }
+}
+.username{
+  font-size: 14px;
+  color: var(--colorFont);
+}

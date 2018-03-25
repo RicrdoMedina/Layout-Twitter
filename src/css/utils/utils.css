@@ -1,0 +1,29 @@
+.u-text-decoration-none,
+.u-text-decoration-none:hover{
+  text-decoration: none;
+}
+.u-text-inherit-color {
+  color: inherit!important;
+}
+.u-fullname{
+  word-break: break-all;
+  color: #14171a;
+  font-size: 14px;
+  font-weight: bold;
+  &:hover{
+    color: var(--colorLink);
+    text-decoration:underline;
+    cursor: pointer;
+  }
+}
+.u-username{
+  font-size: 14px;
+  color: var(--colorFont);
+}
+.u-dir{
+  font-size: 14px;
+  color: var(--colorFont);
+}
+.u-light{
+  font-weight: normal;
+}

@@ -3,29 +3,35 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Local Storage - Webpack</title>
+  <title>Layout - Twitter</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
   <div class="topbar">
     <div class="container">
       <div class="navigation">
-        <ul class="nav">
+        <ul class="nav menu">
           <li class="home">
-            <a>
-              <span class="icon-home"></span>
-              <span class="text">Home</span>
+            <a href="" class="u-text-decoration-none">
+              <span class="icon icon--small">
+                <i class="fas fa-home"></i>
+              </span>
+              <span class="text">Inicio</span>
             </a>
           </li>
           <li class="notification">
-            <a>
-              <span class="icon-home"></span>
+            <a href="" class="u-text-decoration-none">
+              <span class="icon icon--small">
+                <i class="far fa-bell"></i>
+              </span>
               <span class="text">Notificaciones</span>
             </a>
           </li>
           <li class="icon-message">
-            <a>
-              <span class="icon-home"></span>
+            <a href="" class="u-text-decoration-none">
+              <span class="icon icon--small">
+                <i class="far fa-envelope"></i>
+              </span>
               <span class="text">Mensajes</span>
             </a>
           </li>
@@ -37,17 +43,19 @@
       <div class="navigation-extra">
         <div class="search">
           <form action="" class="form-search">
-            <input type="text" class="search-input" placeholder="Buscar en Twitter" autocomplete="off">
-            <span class="icon-search"></span>
+            <input type="text" class="input-search" placeholder="Buscar en Twitter" autocomplete="off">
+            <span class="icon icon--small icon-search">
+              <i class="fas fa-search"></i>
+            </span>
           </form>
           <ul class="nav right-actions">
-            <li class="me">
-              <a>
-                <img class="Avatar" src="" alt="">
+            <li class="me session">
+              <a class="link-avatar">
+                <img class="avatar avatar--size32" src="https://pbs.twimg.com/profile_images/871900981994418177/LYsSlqtJ_normal.jpg" alt="">
               </a>
             </li>
             <li>
-              <button class="btn btn-primary">
+              <button class="button button--primary">
                 Twittear
               </button>
             </li>
@@ -59,28 +67,294 @@
   <div class="page-content">
     <div class="container wrapper-home">
       <div class="dashboard dashboard-left">
-        <div class="dashboard-profile-card">
-
+        <div class="dashboard-profile-card module">
+          <div class="profile-card">
+          </div>
+          <div class="profile-content">
+            <div class="profile-card-content">
+              <a class="profile-card-avatar-link" href="/RicrdoMedina" title="Ricardo Medina">
+                <img class="profile-card-avatar-image" src="https://pbs.twimg.com/profile_images/871900981994418177/LYsSlqtJ_bigger.jpg" alt="">
+              </a>
+              <div class="profile-card-user-fields">
+                <div class="dashboard-profile-card-name">
+                  <a class="link u-text-inherit-color" href="/RicrdoMedina">
+                    Ricardo Medina
+                  </a>
+                </div>
+                <span class="profile-card-screenname">
+                  <a class="profile-card-screenname-link" href="/RicrdoMedina">
+                    <span class="u-username u-dir">@
+                      <b class="u-light">RicrdoMedina</b>
+                    </span>
+                  </a>
+                </span>
+              </div>
+            </div>
+            <div class="profile-card-stats">
+                <ul class="profile-card-stats-statlist">
+                  <li class="profile-card-stats-stat">
+                    <a class="profile-card-stats-stat-link u-text-decoration-none" href="/RicrdoMedina">
+                      <span class="profile-card-stats-stat-label link u-text-decoration-none">Tweets</span>
+                      <span class="profile-card-stats-stat-value">122</span>
+                    </a>
+                  </li>
+                  <li class="profile-card-stats-stat">
+                    <a class="profile-card-stats-stat-link u-text-decoration-none" href="/RicrdoMedina/following">
+                      <span class="profile-card-stats-stat-label link u-text-decoration-none">Siguiendo</span>
+                      <span class="profile-card-stats-stat-value">112</span>
+                    </a>
+                  </li>
+                  <li class="profile-card-stats-stat">
+                    <a class="profile-card-stats-stat-link u-text-decoration-none" href="/RicrdoMedina/followers">
+                      <span class="profile-card-stats-stat-label link u-text-decoration-none">Seguidores</span>
+                      <span class="profile-card-stats-stat-value">74</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+          </div>
         </div>
         <div class="module trends">
-
+          <div clas="trends-inner">
+            <div class="flex-module">
+              <div class="flex-module-header">
+                <h3>
+                  Tendencias para ti
+                </h3>
+                <span class="middot">·</span>
+                <a href="#" class="link">
+                  <small>Cambiar</small>
+                </a>
+              </div>
+              <div class="flex-module-inner">
+                <ul class="trend-items">
+                  <li class="trend-item">
+                    <a class="u-text-decoration-none" href="/hashtag/24Mar?src=tren&amp;data_id=tweet%3A977552343070920704">
+                      <span class="trend-name link">#24Mar</span>
+                      <div class="trend-item-stats">
+                        @la_patilla está twitteando sobre esto
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="content-main top-timeline-tweetbox" id="timeline">
         <div class="timeline-tweet-box">
-
+          <div class="home-tweet-box">
+            <img class="top-timeline-tweet-box-user-image avatar avatar--size32" src="https://pbs.twimg.com/profile_images/871900981994418177/LYsSlqtJ_normal.jpg" alt="Ricardo Medina">
+            <form action="" class="tweet-form condensed" enctype="multipart/form-data">
+              <div class="rich-editor is-fakeFocus">
+                <div class="rich-editor-scroll-container u-border-radius-inherit">
+                  <div id="tweet-box-home-timeline" class="tweet-box rich-editor" contenteditable="false" role="textbox" aria-multiline="true" data-placeholder-default="¿Qué está pasando?" data-placeholder-poll-composer-on="Haz una pregunta..." data-placeholder-reply="Twittea tu respuesta" aria-expanded="false" aria-owns="typeahead-dropdown-10">
+                    <div>
+                      ¿Qué está pasando?
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
         <div class="stream-container conversations-enabled">
-
+          
         </div>
       </div>
       <div class="dashboard dashboard-right">
-        <div class="roaming-module"></div>
-        <div class="footer"></div>
+        <div class="roaming module">
+          <div class="flex-module">
+            <div class="flex-module-header">
+              <h3 class="title">A quién seguir</h3>
+              <small>·</small>
+              <small class="view-all">
+                <a class="link" href="/who_to_follow/suggestions" >
+                  Actualizar
+                </a>
+              </small>
+              <small class="view-all">
+                · 
+                <a class="link" href="/who_to_follow/suggestions" >
+                  Ver todos
+                </a>
+              </small>
+            </div>
+            <div class="flex-module-inner">
+              <div class="dashboard-user-recommendations">
+                <div class="account-summary">
+                  <div class="content">
+                    <div class="account-avatar">
+                      <img class="avatar" src="https://pbs.twimg.com/profile_images/827511445998940160/4j406yBG_bigger.jpg" alt="">
+                    </div>
+                    <div class="account-user">
+                      <div class="account-group-inner">
+                        <a href="" class="u-text-decoration-none">
+                          <strong class="u-fullname">Shawn McCool</strong>
+                          <span class="u-usernameBreak">&nbsp;</span>
+                          <span class="u-username u-dir u-textTruncate" dir="ltr">@<b>ShawnMcCool</b></span>
+                        </a>
+                      </div>
+                      <div class="user-actions">
+                        <button class="button button--secondary button--small button-text follow-text">
+                          Seguir
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="account-avatar">
+                      <img class="avatar" src="https://pbs.twimg.com/profile_images/827511445998940160/4j406yBG_bigger.jpg" alt="">
+                    </div>
+                    <div class="account-user">
+                      <div class="account-group-inner">
+                        <a href="" class="u-text-decoration-none">
+                          <strong class="u-fullname">Shawn McCool</strong>
+                          <span class="u-usernameBreak">&nbsp;</span>
+                          <span class="u-username u-dir u-textTruncate" dir="ltr">@<b>ShawnMcCool</b></span>
+                        </a>
+                      </div>
+                      <div class="user-actions">
+                        <button class="button button--secondary button--small button-text follow-text">
+                          Seguir
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="account-avatar">
+                      <img class="avatar" src="https://pbs.twimg.com/profile_images/827511445998940160/4j406yBG_bigger.jpg" alt="">
+                    </div>
+                    <div class="account-user">
+                      <div class="account-group-inner">
+                        <a href="" class="u-text-decoration-none">
+                          <strong class="u-fullname">Shawn McCool</strong>
+                          <span class="u-usernameBreak">&nbsp;</span>
+                          <span class="u-username u-dir u-textTruncate" dir="ltr">@<b>ShawnMcCool</b></span>
+                        </a>
+                      </div>
+                      <div class="user-actions">
+                        <button class="button button--secondary button--small button-text follow-text">
+                          Seguir
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="flex-module import-prompt">
+            <div class="flex-module-footer">
+              <a href="/who_to_follow/import" class="link u-text-decoration-none" title="Encuentra a personas que conoces">
+                <span class="icon icon--small">
+                  <i class="fas fa-users"></i>
+                </span>
+              </a>
+              <a class="link" href="/who_to_follow/import">Encuentra a personas que conoces</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          <div class="flex-module">
+            <div class="flex-module-inner">
+              <ul class="footer-items">
+                <li class="footer-items-item footer-copyright">
+                  <a class="footer-link" href="#">
+                    © 2018 Twitter
+                  </a>
+                </li>
+                <li class="footer-items-item">
+                  <a class="footer-link" href="#">
+                    Sobre nosotros
+                  </a>
+                </li>
+                <li class="footer-items-item">
+                  <a class="footer-link" href="#">
+                    Centro de Ayuda
+                  </a>
+                </li>
+                <li class="footer-items-item">
+                  <a class="footer-link" href="#">
+                    Condiciones
+                  </a>
+                </li>
+                <li class="footer-items-item">
+                  <a class="footer-link" href="#">
+                    Política de privacidad
+                  </a>
+                </li>
+                <li class="footer-items-item">
+                  <a class="footer-link" href="#">
+                    Cookies
+                  </a>
+                </li>
+                <li class="footer-items-item">
+                  <a class="footer-link" href="#">
+                    Información sobre anuncios
+                  </a>
+                </li>
+                <li class="footer-items-item">
+                  <a class="footer-link" href="#">
+                    Marca
+                  </a>
+                </li>
+                <li class="footer-items-item">
+                  <a class="footer-link" href="#">
+                    Blog
+                  </a>
+                </li>
+                <li class="footer-items-item">
+                  <a class="footer-link" href="#">
+                    Estado
+                  </a>
+                </li>
+                <li class="footer-items-item">
+                  <a class="footer-link" href="#">
+                    Aplicaciones
+                  </a>
+                </li>
+                <li class="footer-items-item">
+                  <a class="footer-link" href="#">
+                    Empleos
+                  </a>
+                </li>
+                <li class="footer-items-item">
+                  <a class="footer-link" href="#">
+                    Marketing
+                  </a>
+                </li>
+                <li class="footer-items-item">
+                  <a class="footer-link" href="#">
+                    Empresas
+                  </a>
+                </li>
+                <li class="footer-items-item">
+                  <a class="footer-link" href="#">
+                    Desarrolladores
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex-module">
+            <div class="flex-module-footer">
+              <a href="//ads.twitter.com/?ref=gl-tw-tw-twitter-webtimeline" class="link u-text-decoration-none" title="Publicitar en Twitter" rel="noopener">
+                <span class="icon icon--small">
+                  <i class="fas fa-external-link-alt"></i>
+                </span>
+              </a>
+              <a class="link" href="//ads.twitter.com/?ref=gl-tw-tw-twitter-webtimeline" rel="noopener">Publicitar en Twitter</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
   <script src="http://localhost:8080/bundle.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </body>
 </html>

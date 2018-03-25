@@ -1,0 +1,35 @@
+.flex-module{
+  background-color: #fff;
+  border: 1px solid #e6ecf0;
+  padding: 15px;
+  line-height: 16px;
+  & .flex-module-header{
+    display: flex;
+    justify-content: flex-start;
+    & h3{
+      margin: 0 3px 10px;
+    }
+  }
+  & .flex-module-inner{
+    @apply --font;
+    & .content{
+      margin-top: 10px;
+      border-bottom: 1px solid #e6ecf0;
+      padding-bottom: 8px;
+    }
+    & .content:first-child{
+      margin-top: 0;
+    }
+    & .content:last-child{
+      border: none;
+      padding-bottom: 0;
+    }
+  }
+  & .flex-module-footer {
+    color: #657786;
+    font-size: 12px;
+  }
+  &+.flex-module {
+    border-top: 0;
+  }
+}

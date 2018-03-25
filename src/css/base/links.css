@@ -1,0 +1,11 @@
+a{
+  text-decoration:none;
+  color: var(--colorFont);
+}
+a:hover{
+  text-decoration:underline;
+}
+.link{
+  color: var(--colorLink);
+  margin:0 3px;
+}

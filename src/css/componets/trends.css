@@ -1,0 +1,20 @@
+.trends{
+  background-color: #fff;
+  background-clip: inherit;
+  line-height: inherit;
+  & .trend-item {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  & .trend-name {
+    font-weight: bold;
+  }
+  & .trend-name:hover {
+    text-decoration: underline;
+  }
+  & .trend-item-stats {
+    color: #657786;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}

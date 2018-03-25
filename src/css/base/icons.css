@@ -1,0 +1,7 @@
+.icon{
+  font-size: 18px;
+  margin-right:8px;
+  &.icon--small{
+    font-size: 14px;
+  }
+}

@@ -1,6 +1,15 @@
 :root {
   --colorWhite:white;
   --bg:rgb(230,236,240);
+  --colorFont:#657786;
+  --colorLink:#91D2FA;
+  --colorLightSkyBlue: #91D2FA;
+  --colorGhostWhite: #eaf5fd;
+  --font{
+    color: var(--colorFont);
+    font-size: 12px;
+    line-height: 16px;
+  }
   --bgBox{
     background: var(--colorWhite);
   }
@@ -11,5 +20,9 @@
     margin:0 auto;
     padding:0;
     position: relative;
+  }
+  --linkHover{
+    color: unset;
+    text-decoration:none;
   }
 }
