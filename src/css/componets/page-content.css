@@ -26,13 +26,14 @@
 
 
 .top-timeline-tweetbox{
+  cursor: text;
   & .timeline-tweet-box{
     background:#F4FAFE;
     height:auto;
     & .home-tweet-box{
       display:flex;
       justify-content: flex-end;
-      align-items: center;
+      align-items: start;
       padding: 10px 12px;
       border: 1px solid #e6ecf0;
       & .top-timeline-tweet-box-user-image{
@@ -44,13 +45,56 @@
         max-height: 36px;
         min-height: 36px;
         border: 1px solid #E3F3FD;
+        padding: 7px 8px 0;
+        display:block;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        white-space: normal;
+        box-sizing: border-box;
+      }
+      & .tweet-box:before{
+        content: attr(data-placeholder-default);
         color: #91D2FA;
-        padding: 0 8px;
-        display: flex;
-        align-items: center;
+        position: absolute;
+      }
+      & .tweet-box.is-actived:before{
+        top: 8px;
+        color: #aab8c2;
+      }
+      & .tweet-box.hide-placeholder:before{
+        display:none;
+      }
+      & .tweet-box.is-actived{
+        max-height:unset;
+        min-height: 80px;
+        margin: 0;
+        outline: 0;
+        background-color:var(--colorWhite);
+        padding: 8px 0 8px 8px;
+        align-items: flex-start;
+        border: solid 2px #D3EDFD;
+        overflow-x: hidden;
+        overflow-y: hidden;
       }
     }
   }
+  & .tweet-form.condensed{
+    position:relative;
+    & .label-seleted-image{
+      position: absolute;
+      top: 10px;
+      right: 5px;
+      cursor: pointer;
+    }
+    & .tweet-action{
+      display:none;
+    }
+    & .icon--tweet-box{
+      font-size: 19px;
+      margin: 0 5px 0 0;
+    }
+  }
+  
   & .stream-container{
     background:#FFF;
     height:700px;
@@ -76,3 +120,17 @@
   }
 }
 
+.options-group{
+  display:flex;
+  justify-content: space-between;
+  & .tweet-action{
+    margin-top: 4px;
+    display: block;
+  }
+  & .icon--tweet-box{
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 24px;
+    display:block;
+  }
+}

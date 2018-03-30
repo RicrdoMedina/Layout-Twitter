@@ -84,7 +84,7 @@
                 <span class="profile-card-screenname">
                   <a class="profile-card-screenname-link" href="/RicrdoMedina">
                     <span class="u-username u-dir">@
-                      <b class="u-light">RicrdoMedina</b>
+                      <b class="u-font-weight-normal">RicrdoMedina</b>
                     </span>
                   </a>
                 </span>
@@ -146,15 +146,22 @@
         <div class="timeline-tweet-box">
           <div class="home-tweet-box">
             <img class="top-timeline-tweet-box-user-image avatar avatar--size32" src="https://pbs.twimg.com/profile_images/871900981994418177/LYsSlqtJ_normal.jpg" alt="Ricardo Medina">
-            <form action="" class="tweet-form condensed" enctype="multipart/form-data">
+            <form action="" id="TweetForm" method="POST" class="tweet-form condensed" enctype="multipart/form-data">
               <div class="rich-editor is-fakeFocus">
                 <div class="rich-editor-scroll-container u-border-radius-inherit">
-                  <div id="tweet-box-home-timeline" class="tweet-box rich-editor" contenteditable="false" role="textbox" aria-multiline="true" data-placeholder-default="¿Qué está pasando?" data-placeholder-poll-composer-on="Haz una pregunta..." data-placeholder-reply="Twittea tu respuesta" aria-expanded="false" aria-owns="typeahead-dropdown-10">
-                    <div>
-                      ¿Qué está pasando?
-                    </div>
-                  </div>
+                  <div id="tweet-box-home-timeline" class="tweet-box rich-editor" contenteditable="false" role="textbox" aria-multiline="true" data-placeholder-default="¿Qué está pasando?" data-placeholder-poll-composer-on="Haz una pregunta..." data-placeholder-reply="Twittea tu respuesta" aria-expanded="false" aria-owns="typeahead-dropdown-10"></div>
                 </div>
+              </div>
+              <div class="options-group">
+                <label for="selectedFile" class="label-seleted-image">
+                  <input id="selectedFile" type="file" value="upload" onchange="uploadFile(this)"/>
+                  <span class="icon icon--tweet-box">
+                    <i class="far fa-image"></i>
+                  </span>
+                </label>
+                <button type="button" class="tweet-action button button--primary">
+                  Twittear
+                </button>
               </div>
             </form>
           </div>
@@ -193,7 +200,7 @@
                         <a href="" class="u-text-decoration-none">
                           <strong class="u-fullname">Shawn McCool</strong>
                           <span class="u-usernameBreak">&nbsp;</span>
-                          <span class="u-username u-dir u-textTruncate" dir="ltr">@<b>ShawnMcCool</b></span>
+                          <span class="u-username u-dir u-font-weight-normal" dir="ltr">@<b>ShawnMcCool</b></span>
                         </a>
                       </div>
                       <div class="user-actions">
@@ -212,7 +219,7 @@
                         <a href="" class="u-text-decoration-none">
                           <strong class="u-fullname">Shawn McCool</strong>
                           <span class="u-usernameBreak">&nbsp;</span>
-                          <span class="u-username u-dir u-textTruncate" dir="ltr">@<b>ShawnMcCool</b></span>
+                          <span class="u-username u-dir u-font-weight-normal" dir="ltr">@<b>ShawnMcCool</b></span>
                         </a>
                       </div>
                       <div class="user-actions">
@@ -231,7 +238,7 @@
                         <a href="" class="u-text-decoration-none">
                           <strong class="u-fullname">Shawn McCool</strong>
                           <span class="u-usernameBreak">&nbsp;</span>
-                          <span class="u-username u-dir u-textTruncate" dir="ltr">@<b>ShawnMcCool</b></span>
+                          <span class="u-username u-dir u-font-weight-normal" dir="ltr">@<b>ShawnMcCool</b></span>
                         </a>
                       </div>
                       <div class="user-actions">
@@ -353,7 +360,7 @@
       </div>
     </div>
   </div>
-  <script src="http://localhost:8080/bundle.js"></script>
+  <script src="http://localhost:8080/js/bundle.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </body>

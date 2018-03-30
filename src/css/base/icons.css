@@ -4,4 +4,9 @@
   &.icon--small{
     font-size: 14px;
   }
+  &.icon--tweet-box{
+    font-size: 19px;
+    color:#91D2FA;
+    cursor: pointer;
+  }
 }
