@@ -1,29 +1,82 @@
+.u-container{
+  width: 100%;
+  height: auto;
+  max-width: 1190px;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+
+  @media ( --desktop ) {
+    max-width: 890px;
+    width: auto;
+  }
+
+  @media ( --tablet ) {
+    max-width: 80%;
+  }
+
+  @media ( --mobile ) {
+    max-width: 100%;
+  }
+}
+
+.u-font{
+  color: var( --colorFont );
+  font-size: 12px;
+  line-height: 16px;
+}
+
 .u-text-decoration-none,
 .u-text-decoration-none:hover{
   text-decoration: none;
 }
+
 .u-text-inherit-color {
-  color: inherit!important;
+  color: inherit;
 }
+
 .u-fullname{
   word-break: break-all;
   color: #14171a;
   font-size: 14px;
   font-weight: bold;
+  
   &:hover{
-    color: var(--colorLink);
-    text-decoration:underline;
+    color: var( --colorLink );
+    text-decoration: underline;
     cursor: pointer;
   }
 }
+
 .u-username{
   font-size: 14px;
-  color: var(--colorFont);
+  color: var( --colorFont );
 }
+
 .u-dir{
   font-size: 14px;
-  color: var(--colorFont);
+  color: var( --colorFont );
 }
+
 .u-font-weight-normal{
   font-weight: normal;
+}
+
+.avatar{
+  border-radius: 50%;
+}
+
+.avatar--size32 {
+  height: 32px;
+  width: 32px;
+}
+
+.avatar--size48 {
+  height: 48px;
+  width: 48px;
+}
+
+.avatar--size72 {
+  height: 72px;
+  width: 72px;
 }

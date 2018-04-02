@@ -5,15 +5,14 @@ module.exports = {
         require('stylelint'),
       ]
     }),
+    require('postcss-font-magician'),
     require('postcss-cssnext')({
       features: {
         autoprefixer: {
-          grid:true,
           flexbox: false
-        },
-        customProperties: false,
-        calc: false,
+        }
       }
-    })
+    }),
+    require('postcss-extend')
   ]
 }

@@ -1,23 +1,14 @@
 @import './lib/variables.css';
-@import './base/body.css';
-@import './base/flex-module.css';
+@import './general/general.css';
+@import './utils/utils.css';
+@import './base/blocks.css';
 @import './base/links.css';
 @import './base/buttons.css';
-@import './base/lists.css';
 @import './base/icons.css';
 @import './componets/topbar.css';
 @import './componets/page-content.css';
 @import './componets/dashboard-profile-card.css';
 @import './componets/trends.css';
 @import './componets/roaming.css';
+@import './componets/tweet.css';
 @import './componets/footer.css';
-@import './utils/utils.css';
-small {
-  font-size: 12px;
-}
-b, strong {
-  font-weight: normal;
-}
-input[type="file"] {
-  display: none;
-}

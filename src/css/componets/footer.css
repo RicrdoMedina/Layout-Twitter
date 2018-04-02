@@ -1,22 +1,28 @@
 .footer{
-  margin-top:10px;
+  margin-top: 10px;
+
   & .footer-items{
     padding-left: 0;
     display: flex;
     flex-wrap: wrap;
-    align-items:center;
+    align-items: center;
     justify-content: flex-start;
     line-height: 18px;
   }
+
   & .footer-items-item{
     padding-right: 14px;
+
     & .footer-link:hover{
-      color: var(--colorLink);
+      color: var( --colorLink );
     }
   }
+
   & .footer-copyright{
+
     & .footer-link:hover{
-      @apply --linkHover
+      
+      @extend .link-hover;
     }
   }
 }

@@ -20,10 +20,17 @@ function clicks (e) {
     $tweetBox.onkeyup = function () {
       if ($tweetBox.textContent.length > 0) {
         $tweetBox.classList.add('hide-placeholder');
+        // validar($tweetBox.textContent);
       }else{
         $tweetBox.classList.remove('hide-placeholder');
       }
     }
+
+    // $tweetBox.onkeydown = function () {
+    //   if ($tweetBox.textContent.length > 0) {
+    //     validar($tweetBox.textContent);
+    //   }
+    // }
     
   }else{
     if($tweetBox.getAttribute('contenteditable') && contntTweetBox.length === 0){
@@ -34,3 +41,16 @@ function clicks (e) {
     }
   }
 }
+
+// function validar(str){
+//   console.log(str);
+//   const max = 5;
+
+//   if(str.length > max) {
+//     let countStrMax = max - str.length;
+//     let remove = str.slice(countStrMax);
+//     console.log(str.slice(remove));
+
+//     $tweetBox.innerHTML = remove;
+//   }
+// }

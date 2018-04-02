@@ -1,0 +1,31 @@
+.tweet{
+  height: 100px;
+  display: grid;
+  grid-template-columns: 65px auto;
+  border-bottom: 1px solid #e6ecf0;
+  cursor: pointer;
+  padding: 5px;
+
+  & .content-avatar{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    & .profile-card-avatar-image{
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      margin-top: 10px;
+    }
+  }
+
+  & .tweet-text-container{
+    font-size: 14px;
+    line-height: 20px;
+    
+    & .tweet-text{
+      padding: 0 5px 0 0;
+      margin-top: 5px;
+    }
+  }
+}

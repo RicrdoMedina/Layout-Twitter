@@ -1,117 +1,117 @@
+
 .page-content{
   padding: 56px 14px 15px;
   position: relative;
+
+  @media ( --tablet ) {
+    padding: 115px 0 15px;
+  }
+
   & .container{
-    @apply --container;
-    display:grid;
+
+    @extend .u-container;
+    display: grid;
     grid-template-columns: 290px 590px 290px;
     grid-column-gap: 10px;
+    grid-template-areas: "dashboard-left content-main dashboard-right";
+
+    @media ( --desktop ) {
+      justify-content: center;
+      grid-template-columns: 290px 300px 290px;
+      grid-template-areas: "dashboard-left content-main content-main";
+    }
+
+    @media ( --tablet ) {
+      justify-content: center;
+      grid-template-columns: 1fr;
+      grid-template-areas: "content-main";
+    }
 
     & .dashboard{
       height: auto;
-      width:100%;
+      width: 100%;
     }
 
     & .content-main{
       height: auto;
-      width:100%;
+      width: 100%;
+      grid-area: content-main;
+    }
+
+    & .dashboard-left{
+      grid-area: dashboard-left;
+
+      @media ( --tablet ) {
+        display: none;
+      }
+    }
+
+    & .dashboard-right{
+      grid-area: dashboard-right;
+
+      @media ( --desktop ) {
+        display: none;
+      }
     }
   }
 }
 
 .module{
-  @apply --bgBox;
-  margin-bottom:10px
+  background: var( --colorWhite );
+  margin-bottom: 10px
 }
 
+.options-group{
+  display: flex;
+  justify-content: space-between;
+
+  & .tweet-action{
+    margin-top: 6px;
+    display: block;
+  }
+
+  & .icon--tweet-box{
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 24px;
+    display: block;
+  }
+}
 
 .top-timeline-tweetbox{
   cursor: text;
+
   & .timeline-tweet-box{
-    background:#F4FAFE;
-    height:auto;
-    & .home-tweet-box{
-      display:flex;
-      justify-content: flex-end;
-      align-items: start;
-      padding: 10px 12px;
-      border: 1px solid #e6ecf0;
-      & .top-timeline-tweet-box-user-image{
-        border-radius: 50%;
-        margin-right: 8px;
-      }
-      & .tweet-box{
-        width: 490px;
-        max-height: 36px;
-        min-height: 36px;
-        border: 1px solid #E3F3FD;
-        padding: 7px 8px 0;
-        display:block;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        white-space: normal;
-        box-sizing: border-box;
-      }
-      & .tweet-box:before{
-        content: attr(data-placeholder-default);
-        color: #91D2FA;
-        position: absolute;
-      }
-      & .tweet-box.is-actived:before{
-        top: 8px;
-        color: #aab8c2;
-      }
-      & .tweet-box.hide-placeholder:before{
-        display:none;
-      }
-      & .tweet-box.is-actived{
-        max-height:unset;
-        min-height: 80px;
-        margin: 0;
-        outline: 0;
-        background-color:var(--colorWhite);
-        padding: 8px 0 8px 8px;
-        align-items: flex-start;
-        border: solid 2px #D3EDFD;
-        overflow-x: hidden;
-        overflow-y: hidden;
-      }
-    }
+    background: #F4FAFE;
+    height: auto;
   }
-  & .tweet-form.condensed{
-    position:relative;
-    & .label-seleted-image{
-      position: absolute;
-      top: 10px;
-      right: 5px;
-      cursor: pointer;
-    }
-    & .tweet-action{
-      display:none;
-    }
-    & .icon--tweet-box{
-      font-size: 19px;
-      margin: 0 5px 0 0;
-    }
+
+  & .tweet-form{
+    width: 100%;
   }
-  
+
   & .stream-container{
-    background:#FFF;
-    height:700px;
-  } 
+    background: var( --colorWhite );
+    height: 700px;
+  }
+
   & .rich-editor{
-    background: #fff;
+    background: var( --colorWhite );
     border-radius: 8px;
     line-height: 20px;
+    
     & .rich-editor-scroll-container {
       overflow-y: auto;
       max-height: 284px;
       position: relative;
     }
   }
-  & .rich-editor div[contenteditable],
-  .rich-editor div[contenteditable]:focus,
-  .rich-editor div[contenteditable].fake-focus {
+
+  & .rich-editor div[ contenteditable ],
+
+  .rich-editor div[ contenteditable ]:focus,
+
+  .rich-editor div[ contenteditable ].fake-focus {
     border: 0;
     border-radius: 0;
     box-shadow: none;
@@ -120,17 +120,76 @@
   }
 }
 
-.options-group{
-  display:flex;
-  justify-content: space-between;
-  & .tweet-action{
-    margin-top: 4px;
-    display: block;
+.tweet-form.condensed{
+  position: relative;
+
+  & .label-seleted-image{
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    cursor: pointer;
   }
+  & .tweet-action{
+    display: none;
+  }
+  
   & .icon--tweet-box{
-    margin-top: 10px;
-    margin-left: 10px;
-    font-size: 24px;
-    display:block;
+    font-size: 19px;
+    margin: 0 5px 0 0;
   }
 }
+
+.home-tweet-box{
+  display: flex;
+  justify-content: flex-end;
+  align-items: start;
+  padding: 10px 12px;
+  border: 1px solid #e6ecf0;
+  
+  & .top-timeline-tweet-box-user-image{
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+
+  & .tweet-box{
+    width: 100%;
+    max-height: 36px;
+    min-height: 36px;
+    border: 1px solid #E3F3FD;
+    padding: 7px 8px 0;
+    display: block;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    box-sizing: border-box;
+  }
+
+  & .tweet-box:before{
+    content: attr( data-placeholder-default );
+    color: #91D2FA;
+    position: absolute;
+  }
+
+  & .tweet-box.is-actived:before{
+    top: 8px;
+    color: #aab8c2;
+  }
+
+  & .tweet-box.hide-placeholder:before{
+    display: none;
+  }
+
+  & .tweet-box.is-actived{
+    max-height: unset;
+    min-height: 80px;
+    margin: 0;
+    outline: 0;
+    background-color: var( --colorWhite );
+    padding: 8px 0 8px 8px;
+    align-items: flex-start;
+    border: solid 2px #D3EDFD;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+}
+

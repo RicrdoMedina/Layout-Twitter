@@ -1,20 +1,26 @@
 .roaming{
+
   & .title{
     font-size: 18px;
     font-weight: bold;
     color: #14171a;
     display: inline;
   }
+
   & .content{
-    display:flex;
+    display: flex;
     justify-content: space-around;
-    & .avatar{
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-    }
   }
+
   & .user-actions{
     margin-top: .3rem;
+  }
+
+  & .view-all a{
+    font-size: var( --fontSize );
+  }
+  
+  & b{
+    font-weight: normal;
   }
 }
