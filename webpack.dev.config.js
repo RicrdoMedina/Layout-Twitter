@@ -16,6 +16,12 @@ module.exports = {
   module:{
     rules: [
       {
+        test: /\.(js)$/,
+        loader: 'eslint-loader',
+        enforce: 'pre',
+        include: [path.resolve(__dirname, './src')]
+      },
+      {
         test:/\.css$/,
         //Indicamos los loaders que se van a extraer
         use:['style-loader', 'css-loader','postcss-loader']
@@ -28,7 +34,17 @@ module.exports = {
             limit: 100000,
           }
         }
-      }
+      },
+      {
+        test:/\.js$/,
+        use:{
+          loader: 'babel-loader',
+          //Agregar configuracion especial para agregar los preset con las versiones ecmascript que le daremos soporte
+          options: {
+            presets: ['es2015','es2016']
+          }
+        }
+      },
     ]
   },
   plugins: [
