@@ -19,6 +19,22 @@
     }
   }
 
+  & .content-tweet{
+    padding-top: 6px;
+  }
+
+  & .link-fullname{
+    display: flex;
+
+    & span{
+      display: flex;
+    }
+
+    & span:first-child {
+      margin-right: 4px;
+    }
+  }
+
   & .tweet-text-container{
     font-size: 14px;
     line-height: 20px;

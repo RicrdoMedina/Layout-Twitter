@@ -64,17 +64,38 @@
 .options-group{
   display: flex;
   justify-content: space-between;
-
+  
   & .tweet-action{
     margin-top: 6px;
     display: block;
   }
 
   & .icon--tweet-box{
-    margin-top: 10px;
     margin-left: 10px;
     font-size: 24px;
     display: block;
+  }
+}
+
+.options{
+  display: flex;
+  width: 240px;
+  justify-content: space-around;
+  align-items: center;
+
+  & .selected{
+    cursor: pointer;
+    border: solid 1px transparent;
+    height: 32px;
+    width: 42px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  & .selected:hover{
+    border: solid 1px #D3EDFD;
   }
 }
 
@@ -92,7 +113,8 @@
 
   & .stream-container{
     background: var( --colorWhite );
-    height: 700px;
+    height: auto;
+    min-height: 700px;
   }
 
   & .rich-editor{
@@ -128,11 +150,17 @@
     top: 10px;
     right: 5px;
     cursor: pointer;
+    height: auto;
+    width: auto;
+    border: none;
+    border-radius: none;
   }
-  & .tweet-action{
+
+  & .tweet-action,
+  & .box-icon{
     display: none;
   }
-  
+
   & .icon--tweet-box{
     font-size: 19px;
     margin: 0 5px 0 0;
@@ -143,7 +171,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: start;
-  padding: 10px 12px;
+  padding: 12px 12px 10px 24px;
   border: 1px solid #e6ecf0;
   
   & .top-timeline-tweet-box-user-image{

@@ -47,6 +47,14 @@
   }
 }
 
+.profile-card-screenname-link{
+  display: flex;
+
+  & span{
+    display: flex;
+  }
+}
+
 .profile-card-stats{
   padding: 16px;
 
