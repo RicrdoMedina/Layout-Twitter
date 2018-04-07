@@ -1,10 +1,11 @@
 .tweet{
-  height: 100px;
+  min-height: 80px;
   display: grid;
   grid-template-columns: 65px auto;
   border-bottom: 1px solid #e6ecf0;
   cursor: pointer;
   padding: 5px;
+  position: relative;
 
   & .content-avatar{
     display: flex;
@@ -43,5 +44,18 @@
       padding: 0 5px 0 0;
       margin-top: 5px;
     }
+  }
+
+  & .delete-tweet{
+    position: absolute;
+    right: 8px;
+    top: 5px;
+    padding: .2rem .4rem;
+    border-radius: 10px;
+    font-size: 12px;
+  }
+
+  & .delete-tweet:hover{
+    color:red;
   }
 }

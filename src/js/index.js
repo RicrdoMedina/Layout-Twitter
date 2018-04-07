@@ -2,6 +2,7 @@ import '../css/style.css'
 import tweetBox from './tweetBoxClick.js'
 
 const $tweetAction = document.getElementById('tweetAction')
+const $contentTweet = document.getElementById('contentTweet')
 
 eventListener()
 
@@ -9,16 +10,40 @@ function eventListener () {
   document.body.addEventListener('click', tweetBox)
   document.addEventListener('DOMContentLoaded', getAllTweet)
   $tweetAction.addEventListener('click', addTweet)
+  $contentTweet.addEventListener('click', deleteTweet)
 }
 
 function addTweet (e) {
   const $tweetBox = document.getElementById('tweetBox')
   const text = $tweetBox.textContent
   if (text.length === 0) return
-  const newTweet = htmlContetTweet(text)
+  const newTweet = htmlContetTweet(text, $contentTweet.children.length)
   // console.log($contentTweet.children.length)
   addTweetLocalStorage(text)
   addHtmlTweet('contentTweet', newTweet)
+  $tweetBox.textContent = ''
+}
+
+function deleteTweet (e) {
+  let id = document.getElementById(e.target.id).getAttribute('data-tweet')
+  console.log(id)
+  let tweet = document.getElementById('tweetText' + id).innerText
+  console.log(tweet)
+  if (e.target.className === 'delete-tweet') {
+    e.target.parentElement.parentElement.remove()
+    deleteTweetLocalStorage(tweet)
+  }
+}
+
+function deleteTweetLocalStorage (tweetDelete) {
+  let tweets
+  tweets = getTweetLocalStorage()
+  tweets.forEach(function (tweet, index) {
+    if (tweetDelete === tweet) {
+      tweets.splice(index, 1)
+    }
+  })
+  window.localStorage.setItem('tweets', JSON.stringify(tweets))
 }
 
 function addTweetLocalStorage (tweet) {
@@ -46,8 +71,8 @@ function getAllTweet () {
   let tweets
   let htmlTweet
   tweets = getTweetLocalStorage()
-  tweets.forEach(function (tweet) {
-    htmlTweet = htmlContetTweet(tweet)
+  tweets.forEach(function (tweet, index) {
+    htmlTweet = htmlContetTweet(tweet, index)
     addHtmlTweet('contentTweet', htmlTweet)
   })
 }
@@ -61,7 +86,7 @@ function addHtmlTweet (id, htmlTweet) {
   el.innerHTML = htmlTweet
 }
 
-function htmlContetTweet (text) {
+function htmlContetTweet (text, id) {
   let htmlTweet = `<div class="tweet">
     <div class="content-avatar">
       <a class="profile-card-avatar-link" href="/RicrdoMedina" title="Ricardo Medina">
@@ -70,7 +95,7 @@ function htmlContetTweet (text) {
     </div>
     <div class="content-tweet">
       <div class="stream-item-header">
-        <a class="link-fullname u-text-decoration-none" href="/la_patilla">
+        <a class="link-fullname u-text-decoration-none" href="">
           <span class="FullNameGroup">
             <strong class="u-fullname">
               Ricardo Medina
@@ -86,10 +111,11 @@ function htmlContetTweet (text) {
         </small>
       </div>
       <div class="tweet-text-container">
-        <p class="tweet-text">
+        <p id="tweetText${id}" class="tweet-text">
           ${text}
         </p>
       </div>
+      <div id="deleteTweet${id}" title="Delete tweet" class="delete-tweet" data-tweet="${id}">X</div>
     </div>
   </div>`
   return htmlTweet
