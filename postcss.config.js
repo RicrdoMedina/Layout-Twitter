@@ -13,6 +13,7 @@ module.exports = {
         }
       }
     }),
-    require('postcss-extend')
+    require('postcss-extend'),
+    require('css-mqpacker')
   ]
 }

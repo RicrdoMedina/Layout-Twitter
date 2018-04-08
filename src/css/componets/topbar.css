@@ -87,6 +87,7 @@
     @media ( --tablet ) {
       flex-direction: row-reverse;
       width: 100%;
+      justify-content: flex-end;
     }
   }
 
@@ -127,13 +128,21 @@
       }
     }
 
+    & .session {
+
+      @media ( --tablet ) {
+        width: 60px;
+      }
+    }
+
     & .page{
       display: none;
 
       @media ( --tablet ) {
         display: flex;
-        padding-left: 5px;
+        justify-content: flex-start;
         padding-bottom: 3px;
+        width: 80px;
       }
     }
   }

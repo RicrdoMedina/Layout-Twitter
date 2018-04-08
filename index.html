@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Layout - Twitter</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./dist/css/main.css">
 </head>
 <body>
   <div class="topbar">
@@ -57,8 +58,8 @@
           </form>
           <ul class="nav right-actions">
             <li class="me session">
-              <a class="link-avatar">
-                <img class="avatar avatar--size32" src="https://pbs.twimg.com/profile_images/871900981994418177/LYsSlqtJ_normal.jpg" alt="">
+              <a id="contentTopbarAvatar" class="link-avatar">
+                <!-- <img class="avatar avatar--size32" src="https://pbs.twimg.com/profile_images/871900981994418177/LYsSlqtJ_normal.jpg" alt=""> -->
               </a>
             </li>
             <li class="page">
@@ -85,7 +86,9 @@
           <div class="profile-content">
             <div class="profile-card-content">
               <a class="profile-card-avatar-link" href="/RicrdoMedina" title="Ricardo Medina">
-                <img class="avatar avatar--size72 profile-card-avatar-image" src="https://pbs.twimg.com/profile_images/871900981994418177/LYsSlqtJ_bigger.jpg" alt="">
+                <div id="contentDashboardAvatar">
+                  <!-- <img class="avatar avatar--size72 profile-card-avatar-image" src="https://pbs.twimg.com/profile_images/871900981994418177/LYsSlqtJ_bigger.jpg" alt=""> -->
+                </div>
               </a>
               <div class="profile-card-user-fields">
                 <div class="dashboard-profile-card-name">
@@ -157,7 +160,10 @@
       <div class="content-main top-timeline-tweetbox" id="timeline">
         <div id="timelineTweetBox" class="area-tweet-box timeline-tweet-box">
           <div id="homeTweetBox" class="area-tweet-box home-tweet-box">
-            <img id="homeTweetBoxAvatar" class="area-tweet-box top-timeline-tweet-box-user-image avatar avatar--size32" src="https://pbs.twimg.com/profile_images/871900981994418177/LYsSlqtJ_normal.jpg" alt="Ricardo Medina">
+            <div id="contentTweetBoxAvatar">
+              <!-- <img id="homeTweetBoxAvatar" class="area-tweet-box top-timeline-tweet-box-user-image avatar avatar--size32" src="https://pbs.twimg.com/profile_images/871900981994418177/LYsSlqtJ_normal.jpg" alt="Ricardo Medina"> -->
+            </div>
+            
             <form action="" id="TweetForm" method="POST" class="area-tweet-box tweet-form condensed" enctype="multipart/form-data">
               <div class="area-tweet-box rich-editor is-fakeFocus">
                 <div class="area-tweet-box rich-editor-scroll-container u-border-radius-inherit">
@@ -173,13 +179,13 @@
                     </span>
                   </label>
                   <div id="homeTweetBoxGif" class="area-tweet-box box-icon selected">
-                    <img id="iconGif" class="area-tweet-box img-icon" src="http://localhost:8080/src/images/gif.PNG" alt="Ricardo Medina">
+                    <!-- <img id="iconGif" class="area-tweet-box img-icon" src="http://localhost:8080/src/images/gif.PNG" alt="Ricardo Medina"> -->
                   </div>
                   <div id="homeTweetBoxCharts" class="area-tweet-box box-icon selected">
-                    <img id="iconCharts" class="area-tweet-box img-icon" src="http://localhost:8080/src/images/charts.PNG" alt="Ricardo Medina">
+                    <!-- <img id="iconCharts" class="area-tweet-box img-icon" src="http://localhost:8080/src/images/charts.PNG" alt="Ricardo Medina"> -->
                   </div>
                   <div id="homeTweetBoxUbication" class="area-tweet-box box-icon">
-                    <img id="iconUbication" class="area-tweet-box img-icon" src="http://localhost:8080/src/images/ubication.PNG" alt="Ricardo Medina">
+                    <!-- <img id="iconUbication" class="area-tweet-box img-icon" src="http://localhost:8080/src/images/ubication.PNG" alt="Ricardo Medina"> -->
                   </div>
                 </div>
                 
@@ -247,8 +253,8 @@
               <div class="dashboard-user-recommendations">
                 <div class="account-summary">
                   <div class="content">
-                    <div class="account-avatar">
-                      <img class="avatar avatar--size48" src="https://pbs.twimg.com/profile_images/827511445998940160/4j406yBG_bigger.jpg" alt="">
+                    <div id="accountAvatarUno" class="account-avatar">
+                      <!-- <img class="avatar avatar--size48" src="https://pbs.twimg.com/profile_images/827511445998940160/4j406yBG_bigger.jpg" alt=""> -->
                     </div>
                     <div class="account-user">
                       <div class="account-group-inner">
@@ -265,8 +271,8 @@
                     </div>
                   </div>
                   <div class="content">
-                    <div class="account-avatar">
-                      <img class="avatar avatar--size48" src="https://pbs.twimg.com/profile_images/827511445998940160/4j406yBG_bigger.jpg" alt="">
+                    <div id="accountAvatarDos" class="account-avatar">
+                      <!-- <img class="avatar avatar--size48" src="https://pbs.twimg.com/profile_images/827511445998940160/4j406yBG_bigger.jpg" alt=""> -->
                     </div>
                     <div class="account-user">
                       <div class="account-group-inner">
@@ -283,8 +289,8 @@
                     </div>
                   </div>
                   <div class="content">
-                    <div class="account-avatar">
-                      <img class="avatar avatar--size48" src="https://pbs.twimg.com/profile_images/827511445998940160/4j406yBG_bigger.jpg" alt="">
+                    <div id="accountAvatarTres" class="account-avatar">
+                      <!-- <img class="avatar avatar--size48" src="https://pbs.twimg.com/profile_images/827511445998940160/4j406yBG_bigger.jpg" alt=""> -->
                     </div>
                     <div class="account-user">
                       <div class="account-group-inner">
@@ -412,7 +418,8 @@
       </div>
     </div>
   </div>
-  <script src="http://localhost:8080/js/bundle.js"></script>
+  <!-- <script src="http://localhost:8080/js/bundle.js"></script> -->
+  <script src="./dist/js/bundle.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </body>

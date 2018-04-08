@@ -1,8 +1,15 @@
+
+import createElementImg from './createElementImg.js'
+import nodeToString from './nodeToString.js'
+import avatar from '../../images/avatar.jpg'
+
 function htmlContetTweet (text, id) {
+  const img = createElementImg('', 'avatar avatar--size48 profile-card-avatar-image', avatar, 'Ricardo Medina')
+  const str = nodeToString(img)
   let htmlTweet = `<div class="tweet">
     <div class="content-avatar">
       <a class="profile-card-avatar-link" href="/RicrdoMedina" title="Ricardo Medina">
-        <img class="avatar avatar--size48 profile-card-avatar-image" src="https://pbs.twimg.com/profile_images/871900981994418177/LYsSlqtJ_bigger.jpg" alt="">
+        ${str}
       </a>
     </div>
     <div class="content-tweet">
