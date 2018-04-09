@@ -5,7 +5,8 @@ module.exports = {
   entry: path.resolve(__dirname,'src/js/index.js'),
   output: {
     path: path.resolve(__dirname,'dist'),
-    filename: 'js/bundle.js',
+    filename: 'js/[name].[hash].js',
+    publicPath: './dist'
   },
   devServer:{
     //Indicamos al dev server que use el HotModuleReplacement
@@ -49,6 +50,6 @@ module.exports = {
   },
   plugins: [
     //Activar HotModuleReplacement
-    new webpack.HotModuleReplacementPlugin(),
+    new webpack.HotModuleReplacementPlugin()
   ]
 }

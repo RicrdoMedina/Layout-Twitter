@@ -1,15 +1,24 @@
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 module.exports = (env) => {
 
   const plugins = [
-    new ExtractTextPlugin('css/[name].css')
+    new ExtractTextPlugin('css/[name].[hash].css')
   ]
   if (env.NODE_ENV === 'production') {
     plugins.push(
-      new CleanWebpackPlugin(['dist'], {root:__dirname})
+      new CleanWebpackPlugin(['dist'], {root:__dirname}),
+      new HtmlWebpackPlugin({
+        filename: '../index.html',
+        template: './templates/index.ejs',
+        title: 'Ricardo Medina',
+        minify: {
+          collapseWhitespace: 'true'
+        }
+      })
     )
   }
 
@@ -17,9 +26,9 @@ module.exports = (env) => {
     entry: path.resolve(__dirname,'src/js/index.js'),
     output: {
       path: path.resolve(__dirname,'dist'),
-      filename: 'js/bundle.js',
+      filename: 'js/[name].[hash].js',
       //Especificar de donde el navegador va a buscar nuestros archivos
-      publicPath: path.resolve(__dirname,'dist')+"/",
+      publicPath: './dist',
       //Definir un hash para los chunk extraidos
       chunkFilename:'js/[id].[chunkhash].js',
     },
@@ -64,7 +73,7 @@ module.exports = (env) => {
             options: {
               limit: 1,
               fallback: 'file-loader',
-              name: 'images/[name].[hash].[ext]'
+              name: '/images/[name].[hash].[ext]'
             }
           }
         },
