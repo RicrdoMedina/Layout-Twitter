@@ -30,7 +30,7 @@ module.exports = (env) => {
       //Especificar de donde el navegador va a buscar nuestros archivos
       publicPath: './dist',
       //Definir un hash para los chunk extraidos
-      chunkFilename:'js/[id].[chunkhash].js',
+      chunkFilename: '/js/[id].[chunkhash].js',
     },
     module:{
       rules: [
